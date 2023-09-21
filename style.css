@@ -30,8 +30,18 @@ nav{
     background: orangered;
     padding: 1rem 0;
 }
+.whole{
+    margin: auto;
+    border: 10px solid  rgb(215, 82, 34);
+   width: 700px;
+   height: 60vh;
+   
+   margin-top: 50px;
+    
+}
 section.input{
     padding-top:100px ;
+   
 }
 h2{
     text-align: center;

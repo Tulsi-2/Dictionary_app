@@ -60,15 +60,12 @@ fetchData.then((response)=>{
         return;
     }
 
-    let definition = data[0].meanings[0].definitions[0];
+    let define = data[0].meanings[0].definitions[0].definition;
     
-    defBox.innerText = definition
+    defBox.innerText = define
+
+
 })
-
-
-
-    
-
 
 }
 
