@@ -53,6 +53,8 @@ fetchData.then((response)=>{
 .then((data)=>{
     console.log(data)
 
+    // if empty result
+
     if(!data.length){
         notFound.innerText ='No result found'
         return;
@@ -63,7 +65,7 @@ fetchData.then((response)=>{
     defBox.innerText = definition
 })
 
-// if empty result
+
 
     
 
