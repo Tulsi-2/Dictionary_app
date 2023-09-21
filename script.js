@@ -64,6 +64,8 @@ fetchData.then((response)=>{
     
     defBox.innerText = define
 
+    
+
 
 })
 

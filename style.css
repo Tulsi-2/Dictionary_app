@@ -34,11 +34,17 @@ nav{
     margin: auto;
     border: 10px solid  rgb(215, 82, 34);
    width: 700px;
-   height: 60vh;
+   height: 70vh;
    
-   margin-top: 50px;
+   margin-top: 30px;
+   box-shadow: rgba(195, 107, 48, 0.74) 0px 10px 15px;
+   width: 700px;
     
 }
+img {
+    height: 100px; width: 100px;
+}
+
 section.input{
     padding-top:100px ;
    
@@ -55,7 +61,7 @@ h2{
     display: flex;
     align-items: center;
     border: 2px solid rgb(215, 82, 34);
-    margin-top: 20px;
+    
 }
 
 input{
