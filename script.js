@@ -6,6 +6,8 @@ let notFound = document.querySelector('.not_found')
 
 let defBox = document.querySelector('.def')
 
+let audioBox = document.querySelector('.audio')
+
 search_btn.addEventListener('click',(e)=>{
     e.preventDefault()
 
@@ -23,27 +25,6 @@ search_btn.addEventListener('click',(e)=>{
     getData(word)
 
 })
-// async function getData(word){
-//     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-
-//     const data = await response.json()
-
-//     // if empty result
-
-//     if(!data.length){
-//         notFound.innerText ='No result found'
-//         return;
-//     }
-
-//     let definition = data[0].meanings[0].definitions[0];
-    
-//     defBox.innerText = definition
-
-
-//     console.log(data)
-
-// }
-
 function getData(word){
     let fetchData = fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
  
@@ -64,12 +45,32 @@ fetchData.then((response)=>{
     
     defBox.innerText = define
 
-    
+    const soundName = data[0].phonetics[0].audio
+    let beat = new Audio(soundName);
+     let aud = document.createElement('audio')
+    aud.src = beat
+    aud.controls = true
+    // audioBox.appendChild(aud)
 
+    beat.play()
+    soundName()
+   
+
+    if(soundName){
+        renderSound(soundName)
+    }
 
 })
 
 }
+// function soundName(){
+   
+//     let aud = document.createElement('audio')
+//     aud.src = beat
+//     aud.controls = true
+//     audioBox.appendChild(aud)
+
+// }
 
 
 
