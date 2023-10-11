@@ -44,6 +44,7 @@ fetchData.then((response)=>{
     let define = data[0].meanings[0].definitions[0].definition;
     
     defBox.innerText = define
+    
 
     const soundName = data[0].phonetics[0].audio
     let beat = new Audio(soundName);
@@ -53,12 +54,7 @@ fetchData.then((response)=>{
     // audioBox.appendChild(aud)
 
     beat.play()
-    soundName()
-   
-
-    if(soundName){
-        renderSound(soundName)
-    }
+    
 
 })
 
